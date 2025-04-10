@@ -1,0 +1,1 @@
+from sklearn.cluster import AgglomerativeClusteringimport timedef single_linkage_cluster(X, n_clusters=3):    start = time.time()    model = AgglomerativeClustering(n_clusters=n_clusters, linkage='single')    y_pred = model.fit_predict(X)    end = time.time()    return y_pred, start, end
